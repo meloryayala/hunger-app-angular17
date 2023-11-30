@@ -1,0 +1,21 @@
+section {
+  margin: 2vh 7vw 0 7vw;
+}
+
+ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul li a{
+  height: 20rem;
+  width: 20rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1rem;
+}

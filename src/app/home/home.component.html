@@ -1,1 +1,13 @@
-<p>home works!</p>
+<section>
+  <p>this is the home!</p>
+
+  <ul>
+    @for (food of foods; track food) {
+    <li>
+    <a href="#">
+    <img [src]="food" [alt]="food" />
+    </a>
+    </li>
+    }
+  </ul>
+</section>
