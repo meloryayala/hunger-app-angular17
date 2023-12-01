@@ -19,7 +19,6 @@ export class FoodService {
         favorite: false,
         stars: 4.5,
         imageUrl: 'assets/images/food/eggs.jpg',
-        origins: ['australia'],
       },
       {
         id: 2,
@@ -29,7 +28,6 @@ export class FoodService {
         favorite: false,
         stars: 4.0,
         imageUrl: 'assets/images/food/cake.jpg',
-        origins: ['australia'],
       },
       {
         id: 3,
@@ -39,7 +37,6 @@ export class FoodService {
         favorite: true,
         stars: 5,
         imageUrl: 'assets/images/food/bacon.jpg',
-        origins: ['england'],
       },
       {
         id: 4,
@@ -49,7 +46,6 @@ export class FoodService {
         favorite: true,
         stars: 4.8,
         imageUrl: 'assets/images/food/croissant.jpg',
-        origins: ['french'],
       },
       {
         id: 5,
@@ -59,7 +55,6 @@ export class FoodService {
         favorite: false,
         stars: 4.5,
         imageUrl: 'assets/images/food/pancakes.jpg',
-        origins: ['usa'],
       },
       {
         id: 6,
@@ -69,7 +64,6 @@ export class FoodService {
         favorite: false,
         stars: 4.0,
         imageUrl: 'assets/images/food/yogurt.jpg',
-        origins: ['australia'],
       }
     ]
   }

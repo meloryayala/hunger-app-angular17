@@ -3,18 +3,35 @@ section {
 }
 
 ul {
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
 
 ul li {
   height: auto;
-  width: 20%;
   border: 1px solid #d1d1d1;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
 }
 
 li a:hover {
@@ -41,7 +58,23 @@ li .card-header {
   justify-content: space-between;
 }
 
+li .card-title {
+  color: black;
+}
+
 li .favorite {
   color: #F03A17;
 }
 
+.tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.tag-item {
+  background-color: dimgray;
+  color: white;
+  border-radius: 50px;
+  padding: 2px 8px 2px 8px;
+}

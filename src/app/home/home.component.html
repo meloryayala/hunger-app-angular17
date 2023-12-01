@@ -1,6 +1,6 @@
 <section>
   <ul>
-    @for (food of foods; track food) {
+    @for (food of foods; track food.id) {
     <li>
     <a href="#">
     <div class="img">
@@ -11,7 +11,7 @@
 
     <div class="card-header">
     <div>
-    <h4>{{food.name}}</h4>
+    <h4 class="card-title">{{food.name}}</h4>
     <p>€ {{(food.price).toFixed(2)}}</p>
     </div>
     <span class="{{food.favorite? 'favorite' : '' }}">
@@ -20,9 +20,11 @@
     </div>
 
     <div>
-    <h5>Savory</h5>
-    <div>
-    badges
+    <h5>Tags</h5>
+    <div class="tags">
+    @for(tag of food.tags; track tag) {
+    <span class="tag-item">{{tag}}</span>
+    }
     </div>
     </div>
 
