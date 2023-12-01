@@ -1,11 +1,32 @@
 <section>
-  <p>this is the home!</p>
-
   <ul>
     @for (food of foods; track food) {
     <li>
     <a href="#">
-    <img [src]="food" [alt]="food" />
+    <div class="img">
+    <img [src]="food.imageUrl" [alt]="food.name" />
+    </div>
+
+    <div class="card-content">
+
+    <div class="card-header">
+    <div>
+    <h4>{{food.name}}</h4>
+    <p>€ {{(food.price).toFixed(2)}}</p>
+    </div>
+    <span class="{{food.favorite? 'favorite' : '' }}">
+    ❤
+    </span>
+    </div>
+
+    <div>
+    <h5>Savory</h5>
+    <div>
+    badges
+    </div>
+    </div>
+
+    </div>
     </a>
     </li>
     }

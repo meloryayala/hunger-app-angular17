@@ -6,16 +6,42 @@ ul {
   display: flex;
   justify-content: left;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-ul li a{
-  height: 20rem;
-  width: 20rem;
+ul li {
+  height: auto;
+  width: 20%;
   border: 1px solid #d1d1d1;
   border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+li a:hover {
+  opacity: 0.9;
+}
+
+ul li .img{
+  height: 20rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 1rem;
 }
+
+li .card-content {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: dimgray;
+}
+
+li .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+li .favorite {
+  color: #F03A17;
+}
+
