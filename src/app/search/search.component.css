@@ -8,5 +8,19 @@
 .search-box {
   display: flex;
   justify-content: space-between;
-  padding: 2vh;
+  padding: 4vh;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 20rem 0 0 20rem ;
+  border: 1px solid #d1d1d1;
+}
+
+.search-button {
+  padding: 10px;
+  border-radius:  0 20rem  20rem 0;
+  border: none;
+  background-color: #d1d1d1;
+  cursor: pointer;
 }
