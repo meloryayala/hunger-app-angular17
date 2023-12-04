@@ -1,4 +1,5 @@
 <section>
+  <app-search [searchTerm]="searchTerm" />
   <ul>
     @for (food of foods; track food.id) {
     <li>
@@ -12,7 +13,7 @@
     <div class="card-header">
     <div>
     <h4 class="card-title">{{food.name}}</h4>
-    <p>€ {{(food.price).toFixed(2)}}</p>
+    <p>{{food.price | currency }}</p>
     </div>
     <span class="{{food.favorite? 'favorite' : '' }}">
     ❤
