@@ -2,13 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {FoodService} from "../services/food/food.service";
 import {CurrencyPipe, NgOptimizedImage} from "@angular/common";
 import {Food} from "../share/models/food";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {SearchComponent} from "../search/search.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgOptimizedImage, CurrencyPipe, SearchComponent],
+  imports: [NgOptimizedImage, CurrencyPipe, SearchComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

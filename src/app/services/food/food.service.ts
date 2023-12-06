@@ -9,6 +9,10 @@ export class FoodService {
   constructor() {
   }
 
+  getFoodById(id: string): Food | undefined {
+    return this.getAll().find(food => food.id === +id);
+  }
+
   getAll(): Food[] {
     return [
       {
@@ -17,8 +21,8 @@ export class FoodService {
         price: 12,
         tags: ['fit', 'vegetarian', 'healthy'],
         favorite: false,
-        stars: 4.5,
         imageUrl: 'assets/images/food/eggs.jpg',
+        description: "A healthy mix of avocado, fresh leave from the local producers and organic eggs",
       },
       {
         id: 2,
@@ -26,8 +30,8 @@ export class FoodService {
         price: 8,
         tags: ['sweet', 'integral'],
         favorite: false,
-        stars: 4.0,
         imageUrl: 'assets/images/food/cake.jpg',
+        description: "Handmade cake with integral flour, mix of proteic nuts and pieces of banana",
       },
       {
         id: 3,
@@ -35,8 +39,8 @@ export class FoodService {
         price: 20,
         tags: ['meat', 'fat'],
         favorite: true,
-        stars: 5,
         imageUrl: 'assets/images/food/bacon.jpg',
+        description: "A typical English breakfast, with organic eggs and bacon, fresh made beans and digestive leaves",
       },
       {
         id: 4,
@@ -44,8 +48,8 @@ export class FoodService {
         price: 7,
         tags: ['pastry', 'sweet'],
         favorite: true,
-        stars: 4.8,
         imageUrl: 'assets/images/food/croissant.jpg',
+        description: "soft croissants combined with black coffee or cappuccino and side nutella",
       },
       {
         id: 5,
@@ -53,8 +57,8 @@ export class FoodService {
         price: 15,
         tags: ['dessert', 'sweet'],
         favorite: false,
-        stars: 4.5,
         imageUrl: 'assets/images/food/pancakes.jpg',
+        description: "Collection of pancakes made with love, berries and hot chocolate sauce",
       },
       {
         id: 6,
@@ -62,8 +66,8 @@ export class FoodService {
         price: 15,
         tags: ['dairy', 'fit', 'healthy'],
         favorite: false,
-        stars: 4.0,
         imageUrl: 'assets/images/food/yogurt.jpg',
+        description: "A powerful and energic combination of protein yogurt, nuts and oat flakes",
       }
     ]
   }

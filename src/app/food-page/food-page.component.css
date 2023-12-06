@@ -1,0 +1,95 @@
+section {
+  margin: 2vh 7vw 0 7vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  gap: 10vw;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5rem;
+  padding: 4rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4em;
+}
+
+.header {
+  display: flex;
+  gap: 6rem;
+}
+
+.text-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+li .favorite {
+  color: #F03A17;
+}
+
+.tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.tag-item {
+  background-color: dimgray;
+  color: white;
+  border-radius: 50px;
+  padding: 2px 8px 2px 8px;
+}
+
+.button-add {
+  padding: 1.5rem;
+  color: white;
+  background-color: black;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+}
+
+.button-add:hover {
+  background-color: dimgray;
+  cursor: pointer;
+}
+
+.img-tag{
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  object-fit: cover;
+  align-self: stretch;
+}
+
+@media only screen and (max-width: 1200px) {
+  .img {
+    width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .img {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+<section>
+  @if (food) {
+  <div class="card">
+  <div class="card-content">
+  <div class="header">
+  <div class="text-header">
+  <h1>{{food.name}}</h1>
+  <p>{{food.description}}</p>
+  </div>
+  <span class="{{food.favorite? 'favorite' : '' }}">
+    ❤
+    </span>
+    </div>
+  <div class="tags">
+  @for (tag of food.tags; track food.id) {
+  <span class="tag-item">{{tag}}</span>
+  }
+  </div>
+    <h2 class="price">{{food.price | currency }}</h2>
+  <button class="button-add" (click)="onAddToCart()">Add to cart</button>
+</div>
+  <div>
+  <img class="img-tag" [src]="food.imageUrl" alt="food.image" />
+  </div>
+</div>
+  } @else {
+  <div>Oops, no food was found!</div>
+  }
+</section>
+
+

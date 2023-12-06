@@ -3,7 +3,7 @@
   <ul>
     @for (food of foods; track food.id) {
     <li>
-    <a href="#">
+    <a routerLink="/food/{{food.id}}">
     <div class="img">
     <img [src]="food.imageUrl" [alt]="food.name" />
     </div>
