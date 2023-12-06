@@ -2,8 +2,8 @@
   <ul>
     @for (cartItem of cart.items; track cartItem.food.id) {
     <li class="card">
-    <div class="img-wrapper">
-    <img class="img-tag" [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
+    <div class="img-tag">
+    <img class="img" [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
     </div>
     <div class="content">
     <a routerLink="/food/{{cartItem.food.id}}">
