@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FoodService} from "../services/food/food.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Food} from "../share/models/food";
 import {CurrencyPipe} from "@angular/common";
+import {CartService} from "../services/cart/cart.service";
 @Component({
   selector: 'app-food-page',
   standalone: true,
@@ -15,17 +16,20 @@ export class FoodPageComponent implements OnInit{
   food: Food | undefined;
   foodId!: string;
 
-  constructor(private foodService: FoodService, private route: ActivatedRoute) { }
+  constructor(private foodService: FoodService,
+              private activatedRoute: ActivatedRoute,
+              private cartService: CartService,
+              private router: Router) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe( (paramMap) => {
+    this.activatedRoute.paramMap.subscribe( (paramMap) => {
       this.foodId = paramMap.get('id')!;
       this.food = this.foodService.getFoodById(this.foodId);
     })
   }
 
-  onAddToCart() {
-    console.log("added to cart")
-
+  addToCart() {
+    this.cartService.addToCart(this.food!);
+    this.router.navigateByUrl('/cart-page');
   }
 }
